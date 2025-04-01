@@ -5,9 +5,20 @@ import {
   GoabPageBlock,
   GoabAppFooterMetaSection,
   GoabOneColumnLayout,
+  GoabButton,
+  GoabModal,
+  GoabButtonGroup,
+  GoabFormItem,
+  GoabRadioGroup,
+  GoabCheckbox,
+  GoabDropdown,
+  GoabDropdownItem,
+  GoabRadioItem
 } from '@abgov/react-components';
+import { useState } from 'react';
 
 export function App() {
+  const [open, setOpen] = useState(false);
   return (
     <GoabOneColumnLayout>
       <section slot="header">
@@ -24,7 +35,75 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        {/* Add content here */}
+      <GoabButton onClick={() => setOpen(true)}>Open Basic Modal</GoabButton>
+<GoabModal
+  heading="Heading"
+  role="dialog"
+  open={open}
+  onClose={() => setOpen(false)}
+  actions={
+    <GoabButtonGroup alignment="end">
+      <GoabButton type="secondary" onClick={() => setOpen(false)}>
+        Secondary
+      </GoabButton>
+      <GoabButton type="primary" onClick={() => setOpen(false)}>
+        Primary
+      </GoabButton>
+    </GoabButtonGroup>
+  }
+>
+<GoabFormItem label="Entry status">
+          <GoabCheckbox text="Draft" value="draft" name={"entryStatus"}></GoabCheckbox>
+          <GoabCheckbox text="Published" value="published" name={"entryStatus"}></GoabCheckbox>
+        </GoabFormItem>
+        <GoabFormItem label="Assigned to - Region">
+          <GoabCheckbox text="Calgary" value="calgary" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="Central" value="central" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="Edmonton" value="edmonton" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="North" value="north" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="South" value="south" name={"region"}></GoabCheckbox>
+        </GoabFormItem>
+        <GoabFormItem label="Assigned to">
+          <GoabDropdown
+            name="assignedTo"
+            onChange={() => {
+              /* do something */
+            }}>
+            <GoabDropdownItem value={"1"} label="Person 1"></GoabDropdownItem>
+            <GoabDropdownItem value={"2"} label="Person 2"></GoabDropdownItem>
+          </GoabDropdown>
+        </GoabFormItem>
+        <GoabFormItem label="Taken by - Region" mt={"xs"}>
+          <GoabCheckbox text="Calgary" value="calgary" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="Central" value="central" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="Edmonton" value="edmonton" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="North" value="north" name={"region"}></GoabCheckbox>
+          <GoabCheckbox text="South" value="south" name={"region"}></GoabCheckbox>
+        </GoabFormItem>
+        <GoabFormItem label="Taken by">
+          <GoabDropdown
+            name="takenBy"
+            onChange={() => {
+              /* do something */
+            }}>
+            <GoabDropdownItem value={"1"} label="Person 1"></GoabDropdownItem>
+            <GoabDropdownItem value={"2"} label="Person 2"></GoabDropdownItem>
+          </GoabDropdown>
+        </GoabFormItem>
+        <GoabFormItem label="Date taken" mt={"xs"}>
+          <GoabRadioGroup
+            name={"dateTaken"}
+            onChange={() => {
+              /** do something **/
+            }}>
+            <GoabRadioItem value="24" label="Last 24 hours"></GoabRadioItem>
+            <GoabRadioItem value="72" label="Last 72 hours"></GoabRadioItem>
+          </GoabRadioGroup>
+        </GoabFormItem>
+
+
+
+</GoabModal>
       </GoabPageBlock>
 
       <section slot="footer">
