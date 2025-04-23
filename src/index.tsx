@@ -2,6 +2,7 @@ import React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import '@abgov/web-components';
 import App from './App';
 
 import './App.css';

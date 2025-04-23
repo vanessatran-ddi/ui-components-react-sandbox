@@ -6,7 +6,7 @@ import {
   GoAAppFooterMetaSection,
   GoAOneColumnLayout,
 } from '@abgov/react-components';
-import { Outlet } from 'react-router-dom';
+import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
 
 export function App() {
   return (
@@ -25,7 +25,7 @@ export function App() {
       </section>
 
       <GoAPageBlock width="100%">
-        {/* Add content here */}
+        <FilterChipExamples/>
       </GoAPageBlock>
 
       <section slot="footer">
