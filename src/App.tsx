@@ -6,6 +6,7 @@ import {
   GoabAppFooterMetaSection,
   GoabOneColumnLayout,
 } from '@abgov/react-components';
+import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
 
 export function App() {
   return (
@@ -24,7 +25,7 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        {/* Add content here */}
+        <FilterChipExamples/>
       </GoabPageBlock>
 
       <section slot="footer">
