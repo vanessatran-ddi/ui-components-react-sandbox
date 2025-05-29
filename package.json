@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@abgov/web-components": "1.33.0-alpha.9",
-    "@abgov/react-components": "5.5.0",
+    "@abgov/react-components": "/Users/thytran142/WebstormProjects/ui-components/dist/libs/react-components",
+    "@abgov/web-components": "/Users/thytran142/WebstormProjects/ui-components/dist/libs/web-components",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2"
