@@ -1,15 +1,14 @@
 import {
     GoabBadge,
-    GoabBadgeType,
     GoabBlock,
     GoabButton,
     GoabFilterChip,
     GoabFormItem,
     GoabInput,
-    GoabInputOnChangeDetail, GoabInputOnKeyPressDetail,
     GoabTable,
     GoabText
 } from "@abgov/react-components";
+import {GoabInputOnChangeDetail, GoabInputOnKeyPressDetail, GoabBadgeType} from "@abgov/ui-components-common";
 import {useCallback, useEffect, useMemo, useState} from "react";
 
 export const FilterDataInTableExample = () => {

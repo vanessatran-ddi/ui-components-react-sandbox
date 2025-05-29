@@ -2,9 +2,8 @@ import {
     GoabFilterChip,
     GoabFormItem,
     GoabInput,
-    GoabInputOnChangeDetail,
-    GoabInputOnKeyPressDetail
 } from "@abgov/react-components";
+import {GoabInputOnChangeDetail, GoabInputOnKeyPressDetail} from "@abgov/ui-components-common";
 import {useState} from "react";
 
 export const FilterChipThroughTypingExample = () => {
