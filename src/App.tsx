@@ -5,29 +5,36 @@ import {
   GoabPageBlock,
   GoabAppFooterMetaSection,
   GoabOneColumnLayout,
+  GoabDropdownItem,
+  GoabDropdown,
+  GoabFormItem
 } from '@abgov/react-components';
 
 export function App() {
   return (
-    <GoabOneColumnLayout>
+    <><GoabOneColumnLayout>
       <section slot="header">
         <GoabMicrositeHeader
           type="beta"
           version="React 1.0"
-          feedbackUrl="https://github.com/GovAlta/ui-components/issues/new/choose"
-        />
+          feedbackUrl="https://github.com/GovAlta/ui-components/issues/new/choose" />
         <GoabAppHeader
           url="/"
           heading="Design system templates"
-          maxContentWidth="100%"
-        />
+          maxContentWidth="100%" />
       </section>
 
       <GoabPageBlock width="100%">
-        {/* Add content here */}
-      </GoabPageBlock>
-
-      <section slot="footer">
+        <div style={{marginTop: "1000px"}}></div>
+      <GoabFormItem label="Basic dropdown">
+        <GoabDropdown name="item" value="" onChange={(e) => console.log(e)}>
+          <GoabDropdownItem value="red" label="Red"></GoabDropdownItem>
+          <GoabDropdownItem value="green" label="Green"></GoabDropdownItem>
+          <GoabDropdownItem value="blue" label="Blue"></GoabDropdownItem>
+        </GoabDropdown>
+      </GoabFormItem>
+    </GoabPageBlock>
+    <section slot="footer">
         <GoabAppFooter maxContentWidth="100%">
           <GoabAppFooterMetaSection>
             <a href="https://goa-dio.slack.com/archives/C02PLLT9HQ9">
@@ -43,6 +50,7 @@ export function App() {
         </GoabAppFooter>
       </section>
     </GoabOneColumnLayout>
+    </>
   );
 }
 
