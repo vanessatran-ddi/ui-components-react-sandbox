@@ -27,7 +27,7 @@ export function App() {
       <GoabPageBlock width="100%">
         <div style={{marginTop: "1000px"}}></div>
       <GoabFormItem label="Basic dropdown">
-        <GoabDropdown name="item" value="" onChange={(e) => console.log(e)}>
+        <GoabDropdown name="item" width="100%" value="" onChange={(e) => console.log(e)}>
           <GoabDropdownItem value="red" label="Red"></GoabDropdownItem>
           <GoabDropdownItem value="green" label="Green"></GoabDropdownItem>
           <GoabDropdownItem value="blue" label="Blue"></GoabDropdownItem>
