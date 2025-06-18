@@ -4,7 +4,7 @@ import {
   GoabAppFooter,
   GoabPageBlock,
   GoabAppFooterMetaSection,
-  GoabOneColumnLayout, GoabButtonGroup, GoabButton, GoabModal,
+  GoabOneColumnLayout, GoabButtonGroup, GoabButton, GoabModal, GoabIcon,
 } from '@abgov/react-components';
 import {useState} from "react";
 
@@ -65,11 +65,26 @@ export function App() {
               activities such as administration, hiring, and placing personnel,{" "}
             </li>
           </ol>
-          <GoabButtonGroup alignment="end" mt="l">
-            <GoabButton type="primary" onClick={onClose}>
-              I understand
-            </GoabButton>
-          </GoabButtonGroup>
+          <p style={{ marginTop: "3rem", marginBottom: "0.5rem"}}>
+            For more information please see:
+          </p>
+          <p style={{ marginBottom: "0" }}>
+            <a
+                href="/"
+                target="_blank"
+            >
+              Wholesale trade (NAICS - 41) - Statistics Canada{" "}
+              <GoabIcon type="open" size="small" />
+            </a>
+            <br />
+            <a
+                href="/"
+                target="_blank"
+            >
+              Retail Trade (NAICS - 44-45) - Statistics Canada{" "}
+              <GoabIcon type="open" size="small" />
+            </a>
+          </p>
         </GoabModal>
       </GoabPageBlock>
 
