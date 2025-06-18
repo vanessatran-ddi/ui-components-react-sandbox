@@ -4,11 +4,38 @@ import {
   GoAAppFooter,
   GoAPageBlock,
   GoAAppFooterMetaSection,
-  GoAOneColumnLayout,
+  GoAOneColumnLayout, GoABlock, GoAFormItem, GoAInput, GoAInputNumber,
 } from '@abgov/react-components';
 import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
+import {useState} from "react";
 
 export function App() {
+  const [fullName, setFullName] = useState<string>('');
+  const [accountNumber, setAccountNumber] = useState<string>('');
+  const [price, setPrice] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(0);
+
+  function onTextChange(name: string, value: string) {
+    switch(name) {
+      case 'fullName':
+        setFullName(value);
+        break;
+      case 'accountNumber':
+        setAccountNumber(value);
+        break;
+    }
+  }
+
+  function onNumberChange(name: string, value: number) {
+    switch(name) {
+      case 'price':
+        setPrice(value);
+        break;
+      case 'quantity':
+        setQuantity(value);
+        break;
+    }
+  }
   return (
     <GoAOneColumnLayout>
       <section slot="header">
@@ -25,7 +52,48 @@ export function App() {
       </section>
 
       <GoAPageBlock width="100%">
-        <FilterChipExamples/>
+        <GoABlock gap="m" direction="column">
+          <GoAFormItem label="Full Name" mb="xl">
+            <GoAInput
+                onChange={onTextChange}
+                value={fullName}
+                name="fullName"
+                type="text"
+                textAlign="left"
+                width="100%"
+            />
+          </GoAFormItem>
+
+          <GoAFormItem label="Account Number" helpText="This input is right aligned." mb="xl">
+            <GoAInput
+                onChange={onTextChange}
+                value={accountNumber}
+                name="accountNumber"
+                textAlign="right"
+                width="15ch"
+            />
+          </GoAFormItem>
+
+          <GoAFormItem label="Price" helpText="The input number component is right aligned by default." mb="xl">
+            <GoAInputNumber
+                onChange={onNumberChange}
+                value={price}
+                name="price"
+                width="7ch"
+                trailingContent={<span style={{ whiteSpace: 'nowrap' }}>per item</span>}
+            />
+          </GoAFormItem>
+
+          <GoAFormItem label="Quantity" helpText="You can set a number input to be left aligned." mb="xl">
+            <GoAInputNumber
+                onChange={onNumberChange}
+                value={quantity}
+                name="quantity"
+                textAlign="left"
+                width="7ch"
+            />
+          </GoAFormItem>
+        </GoABlock>
       </GoAPageBlock>
 
       <section slot="footer">
