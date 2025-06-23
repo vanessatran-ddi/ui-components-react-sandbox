@@ -4,11 +4,16 @@ import {
   GoabAppFooter,
   GoabPageBlock,
   GoabAppFooterMetaSection,
-  GoabOneColumnLayout,
+  GoabOneColumnLayout, GoabPopover, GoabButton, GoabLink, GoabIconButton,
 } from '@abgov/react-components';
 import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
 
 export function App() {
+  const popoverTargetWithClose = (
+      <GoabButton type="primary" size="normal">
+        Click to open
+      </GoabButton>
+  );
   return (
     <GoabOneColumnLayout>
       <section slot="header">
@@ -25,7 +30,16 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        <FilterChipExamples/>
+        <GoabPopover target={popoverTargetWithClose} minWidth="250px">
+          <p>This popover has a close icon button inside</p>
+          <p>Click the icon button below to close this popover.</p>
+          <GoabIconButton
+              icon="close"
+              variant="color"
+              action="close"
+              ariaLabel="Close Popover"
+          />
+        </GoabPopover>
       </GoabPageBlock>
 
       <section slot="footer">
