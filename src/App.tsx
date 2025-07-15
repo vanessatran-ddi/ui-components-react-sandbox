@@ -7,6 +7,10 @@ import {
   GoabOneColumnLayout,
 } from '@abgov/react-components';
 import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
+import {TemporaryNotificationSandbox} from "./temporary-notification/TemporaryNotificationSandbox";
+import {TemporaryNotificationMultiProcessExample} from "./temporary-notification/TemporaryNotificationMultiProcessExample";
+import {TemporaryNotificationProgressExample} from "./temporary-notification/TemporaryNotificationProgressExample";
+import {TemporaryNotificationIndeterminateExample} from "./temporary-notification/TemporaryNotificationIndeterminateExample";
 
 export function App() {
   return (
@@ -25,7 +29,10 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        <FilterChipExamples/>
+        {/*<TemporaryNotificationSandbox/>*/}
+        {/*<TemporaryNotificationMultiProcessExample/>*/}
+        {/*<TemporaryNotificationProgressExample/>*/}
+        <TemporaryNotificationIndeterminateExample/>
       </GoabPageBlock>
 
       <section slot="footer">
