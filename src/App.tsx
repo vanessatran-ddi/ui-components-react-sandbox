@@ -7,6 +7,8 @@ import {
   GoabOneColumnLayout,
 } from '@abgov/react-components';
 import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
+import {MenuButtonPlayground} from "./menu-button/MenuButtonPlayground";
+import {CheckboxListPlayground} from "./checkbox-list/CheckboxListPlayground";
 
 export function App() {
   return (
@@ -25,7 +27,9 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        <FilterChipExamples/>
+        {/*<FilterChipExamples/>*/}
+        {/*<MenuButtonPlayground/>*/}
+        <CheckboxListPlayground/>
       </GoabPageBlock>
 
       <section slot="footer">
