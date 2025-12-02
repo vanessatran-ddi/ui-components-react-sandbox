@@ -1,3 +1,11 @@
+import { WorkSideMenuPlayground } from "./work-side-menu/WorkSideMenuPlayground";
+
+export function App() {
+  return <WorkSideMenuPlayground />;
+}
+
+// Original App layout - uncomment to restore
+/*
 import {
   GoabAppHeader,
   GoabMicrositeHeader,
@@ -10,7 +18,7 @@ import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
 import {MenuButtonPlayground} from "./menu-button/MenuButtonPlayground";
 import {CheckboxListPlayground} from "./checkbox-list/CheckboxListPlayground";
 
-export function App() {
+export function OriginalApp() {
   return (
     <GoabOneColumnLayout>
       <section slot="header">
@@ -27,8 +35,8 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        {/*<FilterChipExamples/>*/}
-        {/*<MenuButtonPlayground/>*/}
+        <FilterChipExamples/>
+        <MenuButtonPlayground/>
         <CheckboxListPlayground/>
       </GoabPageBlock>
 
@@ -50,5 +58,6 @@ export function App() {
     </GoabOneColumnLayout>
   );
 }
+*/
 
 export default App;
