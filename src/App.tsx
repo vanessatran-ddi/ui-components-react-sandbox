@@ -5,6 +5,7 @@ import {
   GoabPageBlock,
   GoabAppFooterMetaSection,
   GoabOneColumnLayout,
+  GoabAppHeaderMenu,
 } from '@abgov/react-components';
 
 export function App() {
@@ -24,7 +25,15 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        {/* Add content here */}
+        <GoabAppHeader url="https://example.com" heading="Service name">
+          <GoabAppHeaderMenu heading="Search" leadingIcon="search">
+            <a href="#">Cases</a>
+            <a href="#">Payments</a>
+            <a href="#">Outstanding</a>
+          </GoabAppHeaderMenu>
+          <a href="#">Support</a>
+          <a href="#" className="interactive">Sign in</a>
+        </GoabAppHeader>
       </GoabPageBlock>
 
       <section slot="footer">
