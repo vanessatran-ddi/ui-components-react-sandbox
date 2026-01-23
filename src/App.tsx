@@ -9,6 +9,7 @@ import {
 import {FilterChipExamples} from "./filter-chip/FilterChipExamples";
 import {MenuButtonPlayground} from "./menu-button/MenuButtonPlayground";
 import {CheckboxListPlayground} from "./checkbox-list/CheckboxListPlayground";
+import {DataGridSandbox} from "./data-grid/DataGridSandbox";
 
 export function App() {
   return (
@@ -27,9 +28,7 @@ export function App() {
       </section>
 
       <GoabPageBlock width="100%">
-        {/*<FilterChipExamples/>*/}
-        {/*<MenuButtonPlayground/>*/}
-        <CheckboxListPlayground/>
+        <DataGridSandbox/>
       </GoabPageBlock>
 
       <section slot="footer">
